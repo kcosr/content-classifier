@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "status": "complete",
+  "findings": [
+    {
+      "text": "synthetic-example",
+      "category": "credential",
+      "reason": "embedded_password"
+    }
+  ]
+}

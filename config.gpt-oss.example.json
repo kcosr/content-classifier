@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "validation_retries": 1,
+  "provider": {
+    "base_url": "https://model.example.com/v1",
+    "model": "/models/gpt-oss-120b",
+    "auth": {
+      "kind": "none"
+    },
+    "timeout_ms": 300000,
+    "max_response_bytes": 524288,
+    "max_tokens": 2048,
+    "output_format": "json_object",
+    "reasoning": {
+      "kind": "effort",
+      "effort": "low"
+    }
+  },
+  "egress": {
+    "kind": "direct"
+  },
+  "limits": {
+    "max_input_bytes": 67108864,
+    "max_text_bytes": 8388608,
+    "max_units": 4096,
+    "max_parts": 65536,
+    "max_segments": 262144,
+    "max_output_bytes": 1048576,
+    "max_findings": 4096,
+    "max_finding_bytes": 65536
+  },
+  "model_screening": {
+    "context_window_tokens": 32768,
+    "max_input_tokens": 24000,
+    "overlap_tokens": 512,
+    "prompt_reserve_tokens": 1024,
+    "estimation_margin_percent": 25,
+    "max_groups": 1024
+  }
+}

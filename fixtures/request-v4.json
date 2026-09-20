@@ -1,0 +1,51 @@
+{
+  "version": 4,
+  "target": {
+    "kind": "conversation",
+    "units": [
+      {
+        "target": true,
+        "role": "user",
+        "kind": "message",
+        "parts": [
+          {
+            "kind": "text",
+            "segments": [
+              {
+                "kind": "source",
+                "text": "Password: synthetic-example"
+              },
+              {
+                "kind": "redacted",
+                "label": "[REDACTED KEY]"
+              }
+            ]
+          },
+          {
+            "kind": "tool_result",
+            "segments": [
+              {
+                "kind": "source",
+                "text": "Again: synthetic-example"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "policy": {
+    "instructions": "Screen credentials.",
+    "categories": [
+      {
+        "id": "credential",
+        "reasons": [
+          "embedded_password"
+        ],
+        "inclusion": [],
+        "exclusion": [],
+        "examples": []
+      }
+    ]
+  }
+}
